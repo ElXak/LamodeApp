@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="@dimen/banners_item_layout_width"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/banners_item_card_width"
+            android:layout_height="@dimen/banners_item_card_height"
+            app:cardCornerRadius="@dimen/banners_item_card_radius"
+            android:layout_marginLeft="@dimen/banners_item_card_marginLeft"
+            android:layout_gravity="center_horizontal"
+            app:cardPreventCornerOverlap="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <ImageView android:id="@+id/background_imageView"
+                       android:layout_width="@dimen/banners_item_image_width"
+                       android:layout_height="@dimen/banners_item_image_height"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       android:src="@drawable/base"
+                       android:adjustViewBounds="true"
+                       android:scaleType="centerCrop"/>
+
+            <TextView android:id="@+id/text_textView"
+                      android:layout_width="@dimen/banners_item_text_width"
+                      android:layout_height="@dimen/banners_item_text_height"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent"
+                      android:textSize="@dimen/banners_item_text_size"
+                      android:text="T-shirt"
+                      android:layout_centerHorizontal="true"
+                      android:gravity="left"
+                      android:layout_marginTop="@dimen/banners_item_text_marginTop"
+                      android:textColor="@color/colorSecondary"
+                      android:layout_marginStart="@dimen/banners_item_text_marginStart"
+                      android:autoSizeTextType="uniform"
+                      android:autoSizeMinTextSize="@dimen/banners_item_text_autoMinSize"
+                      android:autoSizeMaxTextSize="@dimen/banners_item_text_autoMaxSize"/>
+
+            <ImageButton
+                    android:id="@+id/seeMore_imageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/banners_item_button_height"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/btn_more"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="@dimen/banners_item_button_marginTop"
+                    android:layout_marginStart="@dimen/banners_item_button_marginStart"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

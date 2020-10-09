@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context=".SearchResultActivity">
+    <item
+            android:id="@+id/top_cart"
+            android:title="@string/cart"
+            app:actionLayout="@layout/view_cart"
+            app:showAsAction="ifRoom"/>
+</menu>

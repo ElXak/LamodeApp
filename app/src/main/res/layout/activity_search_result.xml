@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SearchResultActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:elevation="0dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorSecondary"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <EditText android:id="@+id/productName_textView"
+                          android:background="@drawable/rounded_edittext_search"
+                          app:layout_constraintTop_toTopOf="parent"
+                          app:layout_constraintBottom_toBottomOf="parent"
+                          app:layout_constraintStart_toStartOf="parent"
+                          android:textSize="@dimen/search_search_editText_textSize"
+                          android:textColor="@color/colorPrimaryDark"
+                          android:paddingStart="@dimen/search_search_editText_paddingStart"
+                          android:layout_width="@dimen/search_search_editText_width"
+                          android:layout_height="@dimen/search_search_editText_height"/>
+
+                <ImageButton android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@android:color/transparent"
+                             android:src="@drawable/ic_search_search"
+                             app:layout_constraintTop_toTopOf="@id/productName_textView"
+                             app:layout_constraintBottom_toBottomOf="@id/productName_textView"
+                             app:layout_constraintStart_toStartOf="@id/productName_textView"
+                             android:layout_marginStart="@dimen/search_search_icon_marginStart"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable"
+                app:tabTextAppearance="@style/TabText"
+                app:tabTextColor="@color/colorPrimaryLight"
+                app:tabSelectedTextColor="@color/colorAccent"
+                android:background="@color/colorSecondary"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

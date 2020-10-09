@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/products_item_card_width"
+            android:layout_height="@dimen/products_item_card_height"
+            android:layout_marginHorizontal="@dimen/products_item_card_layout_marginHorizontal"
+            android:layout_marginBottom="@dimen/products_item_card_layout_marginBottom"
+            app:cardCornerRadius="@dimen/products_item_card_radius"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/colorSecondary"
+            android:layout_gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="@dimen/products_item_card_padding"
+                android:paddingTop="@dimen/products_item_card_paddingTop"
+                android:paddingBottom="@dimen/products_item_card_paddingBottom"
+                android:layout_gravity="center">
+
+            <ImageView android:id="@+id/image_imageView"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:scaleType="center"
+                       android:src="@mipmap/ic_launcher_round"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constrainedHeight="true"
+                       android:maxHeight="@dimen/products_item_image_maxHeight"
+                       app:layout_constraintHeight_max="@dimen/products_item_image_maxHeight"
+                       app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView android:id="@+id/name_textView"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/products_item_name_size"
+                      android:text="T-shirt"
+                      android:textColor="@color/colorPrimaryDark"
+                      android:autoSizeTextType="uniform"
+                      android:autoSizeMinTextSize="@dimen/products_item_name_autoMinSize"
+                      android:autoSizeMaxTextSize="@dimen/products_item_name_autoMaxSize"
+                      app:layout_constraintBottom_toTopOf="@+id/price_textView"
+                      app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView android:id="@+id/price_textView"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/products_item_price_size"
+                      android:textStyle="bold"
+                      android:text="$35.45"
+                      android:textColor="@color/colorPrimaryDark"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView android:id="@+id/rating_imageView"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       app:layout_constrainedHeight="true"
+                       android:maxHeight="@dimen/searchResult_item_image_maxHeight"
+                       app:layout_constraintHeight_max="@dimen/searchResult_item_image_maxHeight"
+                       app:layout_constraintBottom_toBottomOf="@+id/price_textView"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:srcCompat="@drawable/ic_raiting"
+                       app:layout_constraintTop_toTopOf="@+id/price_textView"/>
+
+            <TextView android:id="@+id/rating_textView"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/searchResult_item_rating_size"
+                      android:textStyle="bold"
+                      android:text="4.9"
+                      android:textColor="@color/colorSecondary"
+                      app:layout_constraintStart_toStartOf="parent"
+                      android:layout_marginStart="@dimen/products_item_rating_marginStart"
+                      app:layout_constraintBottom_toBottomOf="@+id/price_textView"
+                      app:layout_constraintTop_toTopOf="@+id/price_textView"
+                      android:layout_marginBottom="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

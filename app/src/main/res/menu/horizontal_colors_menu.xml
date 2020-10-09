@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/color_red"
+            android:icon="@drawable/circle_red_selector"
+            android:title="@string/red"/>
+
+    <item
+            android:id="@+id/color_blue"
+            android:icon="@drawable/circle_blue_selector"
+            android:title="@string/blue"/>
+
+    <item
+            android:id="@+id/color_yellow"
+            android:icon="@drawable/circle_yellow_selector"
+            android:title="@string/yellow"/>
+
+    <item
+            android:id="@+id/color_green"
+            android:icon="@drawable/circle_green_selector"
+            android:title="@string/green"/>
+
+    <item
+            android:id="@+id/color_white"
+            android:icon="@drawable/circle_white_selector"
+            android:title="@string/white"/>
+
+</menu>
