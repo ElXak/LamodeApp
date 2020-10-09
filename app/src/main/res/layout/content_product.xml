@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="ui.product.ProductFragment">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/product_heading_textSize"
+            android:textAllCaps="true"
+            android:textFontWeight="700"
+            android:textColor="@color/colorPrimaryDark50"
+            android:text="@string/select_color"
+            android:id="@+id/select_color_textView"/>
+
+    <HorizontalScrollView android:id="@+id/colorSelector_horizontalScrollView"
+                              android:scrollbars="none"
+                              android:layout_width="wrap_content"
+                              android:layout_height="@dimen/product_colorsSelector_size">
+
+            <RadioGroup android:id="@+id/colorSelector_radioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/product_colorsSelector_size"
+                        android:checkedButton="@id/colorRed_radioButton"
+                        android:orientation="horizontal">
+
+                <RadioButton android:layout_width="@dimen/product_colors_size"
+                             android:layout_height="@dimen/product_colors_size"
+                             android:width="@dimen/product_colors_size"
+                             android:height="@dimen/product_colors_size"
+                             android:layout_marginVertical="@dimen/product_colors_margin"
+                             android:layout_marginEnd="@dimen/product_colors_margin"
+                             android:button="@null"
+                             android:background="@drawable/circle_red_selector"
+                             android:id="@+id/colorRed_radioButton"/>
+
+                <RadioButton android:layout_width="@dimen/product_colors_size"
+                             android:layout_height="@dimen/product_colors_size"
+                             android:width="@dimen/product_colors_size"
+                             android:height="@dimen/product_colors_size"
+                             android:layout_marginVertical="@dimen/product_colors_margin"
+                             android:layout_marginEnd="@dimen/product_colors_margin"
+                             android:button="@null"
+                             android:background="@drawable/circle_blue_selector"
+                             android:id="@+id/colorBlue_radioButton"/>
+
+                <RadioButton android:layout_width="@dimen/product_colors_size"
+                             android:layout_height="@dimen/product_colors_size"
+                             android:width="@dimen/product_colors_size"
+                             android:height="@dimen/product_colors_size"
+                             android:layout_marginVertical="@dimen/product_colors_margin"
+                             android:layout_marginEnd="@dimen/product_colors_margin"
+                             android:button="@null"
+                             android:background="@drawable/circle_yellow_selector"
+                             android:id="@+id/colorYellow_radioButton"/>
+
+                <RadioButton android:layout_width="@dimen/product_colors_size"
+                             android:layout_height="@dimen/product_colors_size"
+                             android:width="@dimen/product_colors_size"
+                             android:height="@dimen/product_colors_size"
+                             android:layout_marginVertical="@dimen/product_colors_margin"
+                             android:layout_marginEnd="@dimen/product_colors_margin"
+                             android:button="@null"
+                             android:background="@drawable/circle_green_selector"
+                             android:id="@+id/colorGreen_radioButton"/>
+
+                <RadioButton android:layout_width="@dimen/product_colors_size"
+                             android:layout_height="@dimen/product_colors_size"
+                             android:width="@dimen/product_colors_size"
+                             android:height="@dimen/product_colors_size"
+                             android:layout_marginVertical="@dimen/product_colors_margin"
+                             android:layout_marginEnd="@dimen/product_colors_margin"
+                             android:button="@null"
+                             android:background="@drawable/circle_orange_selector"
+                             android:id="@+id/colorOrange_radioButton"/>
+
+                <RadioButton android:layout_width="@dimen/product_colors_size"
+                             android:layout_height="@dimen/product_colors_size"
+                             android:width="@dimen/product_colors_size"
+                             android:height="@dimen/product_colors_size"
+                             android:layout_marginVertical="@dimen/product_colors_margin"
+                             android:layout_marginEnd="@dimen/product_colors_margin"
+                             android:button="@null"
+                             android:background="@drawable/circle_white_selector"
+                             android:id="@+id/colorWhite_radioButton"/>
+
+            </RadioGroup>
+
+        </HorizontalScrollView>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/product_heading_textSize"
+            android:textAllCaps="true"
+            android:textFontWeight="700"
+            android:textColor="@color/colorPrimaryDark50"
+            android:text="@string/select_size"
+            android:id="@+id/select_size_textView"/>
+
+    <HorizontalScrollView android:scrollbars="none"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.ChipGroup
+                android:id="@+id/sizeSelector_chipGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_xxxs"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/xxxs" />
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_xxs"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/xxs" />
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_xs"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/xs" />
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_s"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/s" />
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_m"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/m" />
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_xl"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/xl" />
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_xxl"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/xxl" />
+
+            <com.google.android.material.chip.Chip
+                    android:id="@+id/size_xxxl"
+                    style="@style/SizeChipChoice"
+                    app:chipCornerRadius="@dimen/product_size_corner"
+                    android:layout_width="@dimen/product_size_width"
+                    android:layout_height="@dimen/product_size_height"
+                    android:textAlignment="center"
+                    app:rippleColor="@color/colorAccent"
+                    android:text="@string/xxxl" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

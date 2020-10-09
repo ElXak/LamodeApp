@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="@dimen/banners_item_layout_width"
+        android:layout_height="wrap_content">
+
+        <ImageView android:id="@+id/image_imageView"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:src="@drawable/base"
+                   android:adjustViewBounds="true"
+                   android:scaleType="centerCrop"/>
+
+        <TextView android:id="@+id/text_textView"
+                  android:layout_width="@dimen/banners_item_text_width"
+                  android:layout_height="@dimen/banners_item_text_height"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:textSize="@dimen/banners_item_text_size"
+                  android:text="T-shirt"
+                  android:layout_centerHorizontal="true"
+                  android:gravity="left"
+                  android:layout_marginTop="@dimen/banners_item_text_marginTop"
+                  android:textColor="@color/colorSecondary"
+                  android:layout_marginStart="@dimen/banners_item_text_marginStart"
+                  android:autoSizeTextType="uniform"
+                  android:autoSizeMinTextSize="@dimen/banners_item_text_autoMinSize"
+                  android:autoSizeMaxTextSize="@dimen/banners_item_text_autoMaxSize"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

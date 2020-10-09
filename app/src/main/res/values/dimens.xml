@@ -1,0 +1,209 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Navigation Drawer Header -->
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+
+    <!-- Navigation Drawer Header Image -->
+    <dimen name="nav_header_image_width">65dp</dimen>
+    <dimen name="nav_header_image_height">65dp</dimen>
+
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- Content Layout -->
+    <dimen name="content_margins">18dp</dimen>
+
+    <!-- Home Heading -->
+    <dimen name="home_heading_text_size">30sp</dimen>
+    <dimen name="home_heading_text_marginTop">17dp</dimen>
+
+    <!-- Categories Item Layout -->
+    <dimen name="categories_item_layout_marginTop">13dp</dimen>
+    <dimen name="categories_item_layout_coverMargin">-11dp</dimen>
+
+    <!-- Categories Item Card -->
+    <dimen name="categories_item_card_width">87dp</dimen>
+    <dimen name="categories_item_card_height">95dp</dimen>
+    <dimen name="categories_item_card_radius">4dp</dimen>
+    <dimen name="categories_item_card_maxElevation">2dp</dimen>
+    <dimen name="categories_item_card_elevation">1dp</dimen>
+
+    <!-- Categories Item Image -->
+    <dimen name="categories_item_image_width">65dp</dimen>
+    <dimen name="categories_item_image_height">65dp</dimen>
+    <dimen name="categories_item_image_elevation">8dp</dimen>
+    <dimen name="categories_item_image_fadingEdge">15dp</dimen>
+
+    <!-- Categories Item Text -->
+    <dimen name="categories_item_text_marginTop">5dp</dimen>
+    <dimen name="categories_item_text_marginBottom">5dp</dimen>
+    <dimen name="categories_item_text_autoMinSize">14sp</dimen>
+    <dimen name="categories_item_text_autoMaxSize">15sp</dimen>
+    <dimen name="categories_item_text_size">15sp</dimen>
+
+    <!-- Banners Item Card -->
+    <dimen name="banners_item_layout_width">340dp</dimen>
+    <dimen name="banners_item_card_width">325dp</dimen>
+    <dimen name="banners_item_card_height">184dp</dimen>
+    <dimen name="banners_item_card_marginLeft">7.5dp</dimen>
+    <dimen name="banners_item_card_radius">10dp</dimen>
+
+    <!-- Banners Item Image -->
+    <dimen name="banners_item_image_width">317dp</dimen>
+    <dimen name="banners_item_image_height">176dp</dimen>
+
+    <!-- Banners Item Text -->
+    <dimen name="banners_item_text_height">80dp</dimen>
+    <dimen name="banners_item_text_width">126dp</dimen>
+    <dimen name="banners_item_text_marginTop">19dp</dimen>
+    <dimen name="banners_item_text_marginStart">26dp</dimen>
+    <dimen name="banners_item_text_autoMinSize">16sp</dimen>
+    <dimen name="banners_item_text_autoMaxSize">20sp</dimen>
+    <dimen name="banners_item_text_size">18sp</dimen>
+
+    <!-- Banners Item Button -->
+    <dimen name="banners_item_button_height">40dp</dimen>
+    <dimen name="banners_item_button_marginTop">119dp</dimen>
+    <dimen name="banners_item_button_marginStart">26dp</dimen>
+
+    <!-- Search Result Item Layout -->
+    <dimen name="searchResult_item_layout_marginTop">11dp</dimen>
+
+    <!-- Search Result Item Card -->
+    <dimen name="searchResult_item_card_width">160dp</dimen>
+    <dimen name="searchResult_item_card_height">218dp</dimen>
+    <dimen name="searchResult_item_card_layout_marginHorizontal">7.5dp</dimen>
+    <dimen name="searchResult_item_card_layout_marginBottom">15dp</dimen>
+    <dimen name="searchResult_item_card_radius">10dp</dimen>
+    <dimen name="searchResult_item_card_maxElevation">8dp</dimen>
+    <dimen name="searchResult_item_card_elevation">8dp</dimen>
+    <dimen name="searchResult_item_card_paddingTop">20dp</dimen>
+    <dimen name="searchResult_item_card_padding">10dp</dimen>
+
+    <!-- Search Result Image -->
+    <dimen name="searchResult_item_image_maxHeight">142dp</dimen>
+
+    <!-- Search Result Price -->
+    <dimen name="searchResult_item_price_size">12sp</dimen>
+
+    <!-- Search Result Rating -->
+    <dimen name="searchResult_item_rating_size">9sp</dimen>
+    <dimen name="searchResult_item_rating_marginStart">122dp</dimen>
+
+    <!-- Search Result Name -->
+    <dimen name="searchResult_item_name_size">15sp</dimen>
+    <dimen name="searchResult_item_name_autoMinSize">14sp</dimen>
+    <dimen name="searchResult_item_name_autoMaxSize">15sp</dimen>
+
+    <!-- Products Item Layout -->
+    <dimen name="products_item_layout_marginTop">11dp</dimen>
+    <dimen name="products_item_layout_coverMargin">-5.5dp</dimen>
+
+    <!-- Products Item Card -->
+    <dimen name="products_item_card_width">101dp</dimen>
+    <dimen name="products_item_card_height">135dp</dimen>
+    <dimen name="products_item_card_layout_marginHorizontal">5.5dp</dimen>
+    <dimen name="products_item_card_layout_marginBottom">15dp</dimen>
+    <dimen name="products_item_card_radius">10dp</dimen>
+    <dimen name="products_item_card_paddingTop">8dp</dimen>
+    <dimen name="products_item_card_paddingBottom">8dp</dimen>
+    <dimen name="products_item_card_padding">11dp</dimen>
+
+    <!-- Products Image -->
+    <dimen name="products_item_image_maxHeight">77dp</dimen>
+
+    <!-- Products Price -->
+    <dimen name="products_item_price_size">10sp</dimen>
+
+    <!-- Products Rating -->
+    <dimen name="products_item_rating_size">9sp</dimen>
+    <dimen name="products_item_rating_marginStart">60dp</dimen>
+
+    <!-- Products Name -->
+    <dimen name="products_item_name_size">12sp</dimen>
+    <dimen name="products_item_name_autoMinSize">11sp</dimen>
+    <dimen name="products_item_name_autoMaxSize">12sp</dimen>
+
+    <!-- Search Search EditText -->
+    <dimen name="search_search_editText_corners">18dp</dimen>
+    <dimen name="search_search_editText_width">267dp</dimen>
+    <dimen name="search_search_editText_height">35dp</dimen>
+    <dimen name="search_search_editText_paddingStart">41dp</dimen>
+    <dimen name="search_search_editText_textSize">15sp</dimen>
+
+    <!-- Search Search Icon -->
+    <dimen name="search_search_icon_marginStart">15dp</dimen>
+
+    <!-- Product Name -->
+    <dimen name="product_name_textSize">15sp</dimen>
+    <dimen name="product_name_marginTop">8dp</dimen>
+
+    <!-- Product Price -->
+    <dimen name="product_price_textSize">15sp</dimen>
+    <dimen name="product_price_marginTop">4dp</dimen>
+    <dimen name="product_price_marginEnd">42dp</dimen>
+
+    <!-- Product Rating -->
+    <dimen name="product_rating_image_marginStart">6dp</dimen>
+    <dimen name="product_rating_textSize">12sp</dimen>
+    <dimen name="product_rating_marginStart">13dp</dimen>
+    <dimen name="product_rating_marginBottom">2dp</dimen>
+
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Search Search EditText -->
+    <dimen name="notifications_textView_corners">7dp</dimen>
+
+    <!-- Menu View -->
+    <dimen name="menu_item_size">48dp</dimen>
+    <dimen name="menu_item_ripple_size">48dp</dimen>
+    <dimen name="menu_view_width">32dp</dimen>
+    <dimen name="menu_view_height">32dp</dimen>
+    <dimen name="menu_view_circle_width">17dp</dimen>
+    <dimen name="menu_view_circle_height">15dp</dimen>
+    <dimen name="menu_view_textSize">10sp</dimen>
+
+    <!-- Product Slider -->
+    <dimen name="product_slider_height">231dp</dimen>
+    <dimen name="product_slider_indicator_margin">15dp</dimen>
+    <dimen name="product_slider_indicator_padding">3dp</dimen>
+    <dimen name="product_slider_indicator_radius">1dp</dimen>
+
+    <!-- Product Tab -->
+    <dimen name="product_tab_corner">27dp</dimen>
+    <dimen name="product_tab_width">244dp</dimen>
+    <dimen name="product_tab_height">31dp</dimen>
+    <dimen name="product_tab_vertical_margin">16dp</dimen>
+
+    <!-- Product Heading -->
+    <dimen name="product_heading_textSize">12sp</dimen>
+
+    <!-- Product Colors -->
+    <dimen name="product_colorsSelector_size">76dp</dimen>
+    <dimen name="product_colors_size">48dp</dimen>
+    <dimen name="product_colors_margin">8dp</dimen>
+
+    <!-- Product Size -->
+    <dimen name="product_size_width">80dp</dimen>
+    <dimen name="product_size_height">56dp</dimen>
+    <dimen name="product_size_corner">10dp</dimen>
+
+    <!-- Product Bottom -->
+    <dimen name="product_bottomDivader_height">76dp</dimen>
+    <dimen name="product_bottomButton_width">160dp</dimen>
+    <dimen name="product_bottomButton_height">56dp</dimen>
+    <dimen name="product_bottomButton_margin">15dp</dimen>
+    <dimen name="product_bottomButton_textSize">12sp</dimen>
+
+    <!-- Product Details -->
+    <dimen name="product_details_textSize">14sp</dimen>
+    <dimen name="product_details_lable_marginTop">26dp</dimen>
+    <dimen name="app_bar_height">140dp</dimen>
+
+</resources>
