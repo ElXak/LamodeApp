@@ -30,7 +30,7 @@ class CategoriesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_categories)
         setSupportActionBar(toolbar)
 
-        categoryId = intent.getStringExtra(CATEGORY_ID)
+        categoryId = intent.getStringExtra(CATEGORY_ID)!!
 
         /*
         fab.setOnClickListener { view ->
@@ -47,7 +47,7 @@ class CategoriesActivity : AppCompatActivity() {
         val categoriesAdapter = GroupAdapter<ViewHolder>()
         val requestQueue = Volley.newRequestQueue(this)
 
-        var url = "http://lamode.tj/json/categories.php"
+        val url = "http://lamode.tj/json/categories.php"
 
         val categoriesJsonArrayRequest = JsonArrayRequest(
             Request.Method.GET, url, null,

@@ -37,7 +37,7 @@ class SearchResultActivity : AppCompatActivity(), SearchResultFragment.OnFragmen
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        categoryId = intent.getStringExtra(CATEGORY_ID)
+        categoryId = intent.getStringExtra(CATEGORY_ID)!!
 
 
 
