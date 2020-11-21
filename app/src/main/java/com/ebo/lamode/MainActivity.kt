@@ -9,7 +9,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener
 import com.google.android.material.navigation.NavigationView
@@ -17,8 +16,20 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.FragmentTransaction
 import com.ebo.lamode.ui.main.HomeFragment
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.app_bar_main.*
+import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.ebo.lamode.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener/*, SearchResultFragment.OnFragmentInteractionListener*/ {
+
+    private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var binding: ActivityMainBinding
+
     private lateinit var messagesRedCircle: FrameLayout
     private lateinit var messagesCountTextView: TextView
     private var messagesAlertCount = 0
@@ -32,35 +43,35 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (item.itemId) {
             R.id.navigation_home -> {
                 supportFragmentManager.beginTransaction().replace(
-                    R.id.fragment_container,
+                    R.id.nav_host_fragment_activity_main,
                     HomeFragment()
                 ).addToBackStack(null).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_search -> {
                 supportFragmentManager.beginTransaction().replace(
-                    R.id.fragment_container,
+                    R.id.nav_host_fragment_activity_main,
                     SearchFragment()
                 ).addToBackStack(null).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_cart -> {
                 supportFragmentManager.beginTransaction().replace(
-                    R.id.fragment_container,
+                    R.id.nav_host_fragment_activity_main,
                     CartFragment()
                 ).addToBackStack(null).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_profile -> {
                 supportFragmentManager.beginTransaction().replace(
-                    R.id.fragment_container,
+                    R.id.nav_host_fragment_activity_main,
                     ProfileFragment()
                 ).addToBackStack(null).commit()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_more -> {
                 supportFragmentManager.beginTransaction().replace(
-                    R.id.fragment_container,
+                    R.id.nav_host_fragment_activity_main,
                     MoreFragment()
                 ).addToBackStack(null).commit()
                 return@OnNavigationItemSelectedListener true
@@ -71,27 +82,50 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
+//        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+//        val toolbar: Toolbar = findViewById(R.id.toolbar)
+//        setSupportActionBar(toolbar)
+        setSupportActionBar(binding.appBarInclude.toolbar)
+
+        /*
+        binding.fab.setOnClickListener { view ->
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show()
+        }
+        */
+
+
+        val navView: BottomNavigationView = binding.navView
+
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(R.id.navigation_home, R.id.navigation_search, R.id.navigation_cart, R.id.navigation_profile, R.id.navigation_more)
         )
-        drawerLayout.addDrawerListener(toggle)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        navView.setupWithNavController(navController)
+
+
+//        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        val toggle = ActionBarDrawerToggle(
+            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
+        drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
         val navDrawerView: NavigationView = findViewById(R.id.nav_drawer)
         navDrawerView.setNavigationItemSelectedListener(this)
 
-        val navView: BottomNavigationView = findViewById(R.id.nav_view)
-        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-        navView.itemIconTintList = null
+//        navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+//        navView.itemIconTintList = null
 
         if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction().replace(R.id.fragment_container,
+            supportFragmentManager.beginTransaction().replace(R.id.nav_host_fragment_activity_main,
                 HomeFragment()
             ).commit()
             //navDrawerView.setCheckedItem(R.id.nav_message)
@@ -192,7 +226,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 */
 
                 fragmentTransaction.replace(
-                    R.id.fragment_container,
+                    R.id.nav_host_fragment_activity_main,
                     MessagesFragment()
                 ).addToBackStack(null).commit()
 
@@ -201,7 +235,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.top_notifications -> {
                 fragmentTransaction.replace(
-                    R.id.fragment_container,
+                    R.id.nav_host_fragment_activity_main,
                     NotificationsFragment()
                 ).addToBackStack(null).commit()
 

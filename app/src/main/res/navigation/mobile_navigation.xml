@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mobile_navigation"
+        app:startDestination="@id/navigation_home">
+
+    <fragment
+            android:id="@+id/navigation_home"
+            android:name="com.ebo.lamode.ui.main.HomeFragment"
+            android:label="@string/home"
+            tools:layout="@layout/fragment_home" />
+    <fragment
+            android:id="@+id/navigation_search"
+            android:name="com.ebo.lamode.SearchFragment"
+            android:label="@string/search"
+            tools:layout="@layout/fragment_search" />
+    <fragment
+            android:id="@+id/navigation_cart"
+            android:name="com.ebo.lamode.CartFragment"
+            android:label="@string/cart"
+            tools:layout="@layout/fragment_cart" />
+    <fragment
+            android:id="@+id/navigation_profile"
+            android:name="com.ebo.lamode.ProfileFragment"
+            android:label="@string/profile"
+            tools:layout="@layout/fragment_profile" />
+    <fragment
+            android:id="@+id/navigation_more"
+            android:name="com.ebo.lamode.MoreFragment"
+            android:label="@string/more"
+            tools:layout="@layout/fragment_more" />
+
+</navigation>
